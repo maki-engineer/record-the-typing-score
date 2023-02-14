@@ -1,21 +1,12 @@
 import os
 import glob
 
-# TWellJR.exeファイル探索
-file_search = [file_name for file_name in glob.glob("TWellJR.exe")]
-
-if not file_search:
-  print("\n　TWellJR.exeファイルが見つかりませんでした...\n　タイピング記録.exeは、TWellJR.exeファイルが置いてある場所に置いてください！\n")
-  os.system('PAUSE')
-  exit()
-
 # JR全履歴フォルダ探索
 directory_search = [directory_name for directory_name in glob.glob("JR全履歴")]
 
-# 見つからなかったら作っちゃって終わり
+# 見つからなかったら終わり
 if not directory_search:
-  os.mkdir("JR全履歴")
-  print("　タイプウェルをされていないため、記録しませんでした。")
+  print("\n　TWellJR.exeファイルが見つかりませんでした...\n　タイピング記録.exeは、TWellJR.exeファイルが置いてある場所に置いてください！\n\n　もしくは、まだ一度もタイプウェルをプレイされていない可能性があります！ \n　タイプウェルを一度プレイして、記録してみてから、再度タイピング記録.exeを開いてみてください！\n")
   os.system('PAUSE')
   exit()
 
