@@ -21,6 +21,7 @@ if not directory_search:
 
 # 本日分のテキストファイル名作成
 import datetime
+
 now         = datetime.datetime.now()
 format_year  = str(now.year % 100)
 format_month = now.strftime("%m")
@@ -74,6 +75,7 @@ wait.sleep(5)
 
 # ここでエクセルに記録
 import openpyxl as px
+
 wb          = px.load_workbook(filename = ".//タイピングスコア.xlsx")
 sh          = wb['タイピング']
 month, date = now.month, now.day
